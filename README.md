@@ -1,46 +1,49 @@
-# Getting Started with Create React App
+# React Word Counter 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## An application that analyzes and counts words
 
-## Available Scripts
 
-In the project directory, you can run:
+<p align = 'center'>
+    <img src="./screenshots/HomePage.png" width="80%">
+</p>
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Running the Application
+- To run this application locally navigate into it's directory and run the following 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+npm install && yarn start
+```
 
-### `yarn test`
+- If you would like to build the application simply run
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm install && yarn build
+```
 
-### `yarn build`
+### About
+- This application is a light weight purely client-side application built with React and Typescript as requested.
+    - Functional components were used as they have faster rendering speeds and there was no apparent use for props or any parent-child component data flow 
+    - Data that had to be stored was stored in local state with the use of 'useState()' React hooks
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### How it works
+- This application works by analyzing and extracting metrics from the text input data provided within the text-area
+- The number of total characters, non-blank characters, as well as the number of words are computed.
+    - A 'word' is considered a 'legible word' by the program as long it is not a blank space and does not start with a punctuation mark
+    - The program detects this via splitting and checking the first character of each word as follows: 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<p align = 'center'>
+    <img src="./screenshots/WordCheck.png" width="80%">
+</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Words are displayed in a table at the bottom of the page along with their frequencies
+    - the ↑ and ↓ buttons can be used to sort the words alphabetically or numerically based off of frequency
 
-### `yarn eject`
+<p align = 'center'>
+    <img src="./screenshots/Animated.gif" width="80%">
+</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Author
+- **Sasank Ganapathiraju**
